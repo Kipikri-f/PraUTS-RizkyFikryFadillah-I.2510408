@@ -1,74 +1,34 @@
-# Pre-Midterm Practicum — Object-Oriented Programming (Java)
+# Praktikum Pra UTS — Java OOP (Sesi 1)
 
-This repository contains Java source code from the **Object-Oriented Programming (OOP)** Pre-Midterm Practicum. The practicum is divided into two sessions: **Pra1** and **Pra2**.
+Repositori ini berisi kode Java hasil praktikum Pra UTS sesi pertama, mata kuliah Pemrograman Berorientasi Objek (OOP). Materi mencakup konsep dasar OOP: kelas, objek, atribut, metode, parameter, constructor, enkapsulasi, pewarisan, dan polimorfisme.
 
 ---
 
-## Folder Structure
+## Struktur Folder
 
 ```
 PraUTS/
-│
-├── Pra1/
-│   ├── E1/
-│   │   ├── Motor.java
-│   │   └── MotorBeraksi.java
-│   ├── E1P2/
-│   │   ├── Motor2.java
-│   │   └── Motor2Beraksi.java
-│   ├── E2P3/
-│   │   ├── Sepeda.java
-│   │   └── SepedaBeraksi.java
-│   ├── E3P4/
-│   │   ├── MobilBaru.java
-│   │   └── MobilBaruBeraksi.java
-│   ├── F1P5/
-│   │   ├── Mahasiswa.java
-│   │   └── Sks.java
-│   ├── F2P6/
-│   │   └── Main.java
-│   ├── F3P7/
-│   │   └── HewanPolimor.java
-│   └── G1T1/
-│       ├── Mahasiswa.java
-│       └── MahasiswaBeraksi.java
-│
-└── Pra2/
-    ├── G2T2/
-    │   ├── Matematika.java
-    │   └── MatematikaBeraksi.java
-    ├── G3T3/
-    │   ├── MobilLengkap.java
-    │   └── MobilLengkapBeraksi.java
-    ├── G4P7/
-    │   └── HewanPolimor.java
-    ├── H1Overriding/
-    │   └── BentukBeraksi.java
-    ├── H2Overloading/
-    │   ├── Hitung.java
-    │   └── HitungBeraksi.java
-    ├── I1TugasAbstraksi/
-    │   ├── MakhlukHidup.java
-    │   └── MakhlukHidupBeraksi.java
-    └── I2TugasAbstraksi2/
-        ├── Kendaraan.java
-        ├── Mobil.java
-        ├── Sepeda.java
-        └── KendaraanBeraksi.java
+├── E1/           → Praktik 1 : Membuat Kelas, Objek, dan Memanggil Atribut
+├── E1P2/         → Praktik 2 : Membuat dan Memanggil Metode
+├── E2P3/         → Praktik 3 : Membuat Parameter
+├── E3P4/         → Praktik 4 : Membuat Constructor
+├── F1P5/         → Praktik 5 : Enkapsulasi
+├── F2P6/         → Praktik 6 : Pewarisan (Inheritance)
+├── F3P7/         → Praktik 7 : Polimorfisme
+└── G1T1/         → Tugas 1   : Membuat Class Mahasiswa
 ```
 
 ---
 
-## Pra1 — First Practicum Session
+## Daftar Praktikum
 
-### E1 — Creating a Class, Object, and Calling Attributes
+### E1 — Membuat Kelas, Objek, dan Memanggil Atribut
 
-**Files:** `Motor.java`, `MotorBeraksi.java`
-**Package:** `Pra1.E1`
+**File:** `Motor.java`, `MotorBeraksi.java` | **Package:** `Pra1.E1`
 
-Defines a `Motor` class with two `private` attributes: `warna` (color) and `merk` (brand). A parameterized constructor initializes both attributes when an object is created. The `tampilkanInfo()` method prints the attribute values to the console. The object is instantiated and run from the `MotorBeraksi` class.
+Class `Motor` mendefinisikan dua atribut `private` yaitu `warna` dan `merk`. Constructor menerima kedua atribut saat objek dibuat. Method `tampilkanInfo()` mencetak nilai atribut ke konsol. Objek dibuat dan dijalankan dari class `MotorBeraksi`.
 
-**Concepts:** Class, Object, Constructor, Access Modifier (`private`), Method
+**Konsep:** Class, Object, Constructor, Access Modifier (`private`), Method
 
 **Output:**
 ```
@@ -78,14 +38,13 @@ Merk: Honda
 
 ---
 
-### E1P2 — Creating and Calling Methods (Setter)
+### E1P2 — Membuat dan Memanggil Metode
 
-**Files:** `Motor2.java`, `Motor2Beraksi.java`
-**Package:** `Pra1.E1P2`
+**File:** `Motor2.java`, `Motor2Beraksi.java` | **Package:** `Pra1.E1P2`
 
-An extension of E1. The `Motor2` class adds two setter methods — `setWarna()` and `setMerk()` — allowing attribute values to be changed after the object has been created. Demonstrates how object state can be mutated through methods.
+Pengembangan dari E1. Class `Motor2` menambahkan dua setter method — `setWarna()` dan `setMerk()` — sehingga nilai atribut bisa diubah setelah objek dibuat. Mendemonstrasikan bagaimana state objek dapat dimutasi melalui method.
 
-**Concepts:** Setter Method, Method Invocation, Object State Mutation
+**Konsep:** Setter Method, Pemanggilan Method, Mutasi State Objek
 
 **Output:**
 ```
@@ -97,14 +56,13 @@ Merk: Suzuki
 
 ---
 
-### E2P3 — Creating Method Parameters
+### E2P3 — Membuat Parameter
 
-**Files:** `Sepeda.java`, `SepedaBeraksi.java`
-**Package:** `Pra1.E2P3`
+**File:** `Sepeda.java`, `SepedaBeraksi.java` | **Package:** `Pra1.E2P3`
 
-The `Sepeda` class holds two attributes: `merk` (String) and `kecepatan` (int). The `ubahKecepatan(int kecepatanBaru)` method accepts a parameter to update the speed value. Demonstrates how parameters are used to pass data into methods.
+Class `Sepeda` memiliki atribut `merk` (String) dan `kecepatan` (int). Method `ubahKecepatan(int kecepatanBaru)` menerima parameter untuk memperbarui nilai kecepatan. Mendemonstrasikan cara passing data ke dalam method melalui parameter.
 
-**Concepts:** Method Parameters, `int` Data Type, Attribute Mutation via Parameter
+**Konsep:** Parameter Method, Tipe Data `int`, Mutasi Atribut via Parameter
 
 **Output:**
 ```
@@ -116,14 +74,13 @@ Kecepatan: 30 km/jam
 
 ---
 
-### E3P4 — Creating a Constructor
+### E3P4 — Membuat Constructor
 
-**Files:** `MobilBaru.java`, `MobilBaruBeraksi.java`
-**Package:** `Pra1.E3P4`
+**File:** `MobilBaru.java`, `MobilBaruBeraksi.java` | **Package:** `Pra1.E3P4`
 
-The `MobilBaru` class uses a parameterized constructor `(String warna, String merk)` to initialize its attributes at the moment the object is created, using the `this` keyword to distinguish instance variables from parameters.
+Class `MobilBaru` menggunakan constructor berparameter `(String warna, String merk)` untuk menginisialisasi atribut saat objek pertama kali dibuat, menggunakan keyword `this` untuk membedakan variabel instance dari parameter.
 
-**Concepts:** Parameterized Constructor, Object Initialization, `this` Keyword
+**Konsep:** Constructor Berparameter, Inisialisasi Objek, Keyword `this`
 
 **Output:**
 ```
@@ -133,14 +90,13 @@ Merk: Toyota
 
 ---
 
-### F1P5 — Encapsulation
+### F1P5 — Enkapsulasi
 
-**Files:** `Mahasiswa.java`, `Sks.java`
-**Package:** `Pra1.F1P5`
+**File:** `Mahasiswa.java`, `Sks.java` | **Package:** `Pra1.F1P5`
 
-Applies the encapsulation principle to the `Mahasiswa` class. The attributes `nama` and `sks` are declared `private`, preventing direct external access. They are exposed through a getter `getSks()` and a setter `setSks()`. Demonstrates how to control data access and protect object integrity.
+Menerapkan prinsip enkapsulasi pada class `Mahasiswa`. Atribut `nama` dan `sks` dideklarasikan `private` sehingga tidak bisa diakses langsung dari luar. Disediakan getter `getSks()` dan setter `setSks()` sebagai jalur akses yang terkontrol.
 
-**Concepts:** Encapsulation, `private` Access Modifier, Getter, Setter
+**Konsep:** Enkapsulasi, Access Modifier `private`, Getter, Setter
 
 **Output:**
 ```
@@ -152,14 +108,20 @@ SKS: 30
 
 ---
 
-### F2P6 — Inheritance
+### F2P6 — Pewarisan (Inheritance)
 
-**Files:** `Main.java`
-**Package:** `Pra1.F2P6`
+**File:** `Main.java` | **Package:** `Pra1.F2P6`
 
-All classes are written inside a single file `Main.java`. The `Orang` class acts as the superclass, holding `nama` and `umur` attributes. Both `Mahasiswa` and `Dosen` inherit from `Orang` using the `extends` keyword and each adds its own attribute (`nim` and `nidn` respectively). The `Main` class instantiates both subclasses and calls methods from both the superclass and subclass.
+Semua class ditulis dalam satu file `Main.java`. Class `Orang` bertindak sebagai superclass dengan atribut `nama` dan `umur`. Class `Mahasiswa` dan `Dosen` mewarisi `Orang` menggunakan keyword `extends` dan masing-masing menambahkan atribut tambahan (`nim` dan `nidn`).
 
-**Concepts:** Inheritance, Superclass, Subclass, `extends`, Inherited Methods
+**Hierarki Class:**
+```
+Orang
+├── Mahasiswa  (+nim, +tampilkanNim())
+└── Dosen      (+nidn, +tampilkanNidn())
+```
+
+**Konsep:** Pewarisan, Superclass, Subclass, `extends`, Method Warisan
 
 **Output:**
 ```
@@ -173,14 +135,21 @@ NIDN: 654321
 
 ---
 
-### F3P7 — Polymorphism
+### F3P7 — Polimorfisme
 
-**Files:** `HewanPolimor.java`
-**Package:** `Pra1.F3P7`
+**File:** `HewanPolimor.java` | **Package:** `Pra1.F3P7`
 
-All classes are written in a single file. The class hierarchy is: `Hewan` (base) → `Herbivora` and `Karnivora` → `Kelinci` (subclass of `Herbivora`). Each class overrides the `suara()` method. In the main class, all objects are stored in variables of type `Hewan` — each call to `suara()` produces a different output depending on the actual runtime type of the object.
+Semua class ditulis dalam satu file. Hierarki class: `Hewan` (base) → `Herbivora` dan `Karnivora` → `Kelinci` (subclass dari `Herbivora`). Setiap class meng-override method `suara()`. Di class utama, semua objek disimpan dalam variabel bertipe `Hewan` — output berbeda sesuai tipe runtime objek.
 
-**Concepts:** Polymorphism, Method Overriding, Upcasting, Runtime Dispatch
+**Hierarki Class:**
+```
+Hewan
+├── Herbivora
+│   └── Kelinci
+└── Karnivora
+```
+
+**Konsep:** Polimorfisme, Method Overriding, Upcasting, Runtime Dispatch
 
 **Output:**
 ```
@@ -192,14 +161,13 @@ Suara kelinci
 
 ---
 
-### G1T1 — Assignment 1: Mahasiswa Class
+### G1T1 — Tugas 1: Membuat Class Mahasiswa
 
-**Files:** `Mahasiswa.java`, `MahasiswaBeraksi.java`
-**Package:** `Pra1.G1T1`
+**File:** `Mahasiswa.java`, `MahasiswaBeraksi.java` | **Package:** `Pra1.G1T1`
 
-An independent assignment to create a `Mahasiswa` class with `name` and `nim` attributes, and three methods: `tampilkanNama()`, `tampilkanNIM()`, and `olahraga()`. Three separate objects are instantiated in `MahasiswaBeraksi` to represent three different students (Rein, Nei, Sen).
+Tugas mandiri membuat class `Mahasiswa` dengan atribut `name` dan `nim`, serta tiga method: `tampilkanNama()`, `tampilkanNIM()`, dan `olahraga()`. Tiga objek diinstansiasi di `MahasiswaBeraksi` untuk merepresentasikan tiga mahasiswa berbeda.
 
-**Concepts:** Class, Object, Multiple Instances, Method Invocation
+**Konsep:** Class, Object, Multiple Instance, Pemanggilan Method
 
 **Output:**
 ```
@@ -216,137 +184,24 @@ Olahraga Favorite: Sepak Bola, Bola Voli
 
 ---
 
-## Pra2 — Second Practicum Session
+## Ringkasan Konsep OOP
 
-### G2T2 — Assignment 2: Matematika Class with Parameters
-
-**Files:** `Matematika.java`, `MatematikaBeraksi.java`
-**Package:** `Pra2.G2T2`
-
-The `Matematika` class provides four arithmetic operation methods, each accepting two parameters: `pertambahan` (addition), `pengurangan` (subtraction), `perkalian` (multiplication), and `pembagian` (division). The `pembagian` method uses a `double` return type with an explicit `(double)` cast to prevent integer truncation on division results.
-
-**Concepts:** Method Parameters, Return Values, Type Casting, `double` Data Type
-
-**Output:**
-```
-Pertambahan: 40
-Pengurangan: 5
-Perkalian: 200
-Pembagian: 10.5
-```
+| Konsep | Praktik |
+|---|---|
+| Class & Object | E1, E1P2, E2P3, E3P4 |
+| Constructor | E1, E3P4 |
+| Access Modifier (`private`) | E1, E1P2, F1P5 |
+| Setter & Getter | E1P2, F1P5 |
+| Enkapsulasi | F1P5 |
+| Pewarisan (`extends`) | F2P6 |
+| Polimorfisme | F3P7 |
+| Method Overriding | F3P7 |
 
 ---
 
-### G3T3 — Assignment 3: MobilLengkap Class
+## Cara Menjalankan
 
-**Files:** `MobilLengkap.java`, `MobilLengkapBeraksi.java`
-**Package:** `Pra2.G3T3`
-
-The `MobilLengkap` class models a car's behavior through three `void` methods with no parameters: `hidupkanMobil()` (start the car), `matikanMobil()` (stop the car), and `ubahGigi()` (change gear). Demonstrates how real-world object behavior can be represented as Java methods.
-
-**Concepts:** `void` Methods, Object Behavior Modeling, Sequential Method Calls
-
-**Output:**
-```
-Mobil dihidupkan
-Gigi mobil diubah
-Mobil dimatikan
-```
-
----
-
-### G4P7 — Practicum 7: Polymorphism (Pra2)
-
-**Files:** `HewanPolimor.java`
-**Package:** `Pra2.G4P7`
-
-A re-implementation of the polymorphism concept from F3P7 in Pra1, using the same class hierarchy but with cleaner indentation and code structure. All classes are written in a single file.
-
-**Concepts:** Polymorphism, Method Overriding, Upcasting
-
-**Output:**
-```
-Suara hewan
-Suara herbivora
-Suara karnivora
-Suara kelinci
-```
-
----
-
-### H1Overriding — Method Overriding with `@Override`
-
-**Files:** `BentukBeraksi.java`
-**Package:** `Pra2.H1Overriding`
-
-All classes are contained in a single file. The `Bentuk` class defines a `gambar()` method. Subclasses `Segitiga` and `Persegi` override the method using the `@Override` annotation, which explicitly signals that the method is intentionally replacing the parent's version. Variables of type `Bentuk` hold subclass objects — method output differs based on the actual object type.
-
-**Concepts:** Method Overriding, `@Override` Annotation, Polymorphism
-
-**Output:**
-```
-Menggambar bentuk
-Menggambar segitiga
-Menggambar persegi
-```
-
----
-
-### H2Overloading — Method Overloading
-
-**Files:** `Hitung.java`, `HitungBeraksi.java`
-**Package:** `Pra2.H2Overloading`
-
-The `Hitung` class demonstrates method overloading through three versions of the `tambah()` method: two `int` parameters, two `double` parameters, and three `int` parameters. The compiler selects the correct version at compile time based on the number and types of arguments provided.
-
-**Concepts:** Method Overloading, Compile-time Polymorphism, Method Signature
-
-**Output:**
-```
-Pertambahan 2 angka (int): 8
-Pertambahan 2 angka (double): 8.8
-Pertambahan 3 angka (int): 6
-```
-
----
-
-### I1TugasAbstraksi — Abstraction Assignment 1: MakhlukHidup
-
-**Files:** `MakhlukHidup.java`, `MakhlukHidupBeraksi.java`
-**Package:** `Pra2.I1TugasAbstraksi`
-
-`MakhlukHidup` is declared as an `abstract class` with one abstract method `bernapas()`. The classes `Manusia` and `Hewan` each provide their own concrete implementation of that method. Since abstract classes cannot be instantiated directly, variables are declared as type `MakhlukHidup` and assigned concrete subclass objects.
-
-**Concepts:** Abstract Class, Abstract Method, Concrete Implementation
-
-**Output:**
-```
-Manusia bernapas dengan paru-paru
-Hewan bernapas dengan berbagai cara
-```
-
----
-
-### I2TugasAbstraksi2 — Abstraction Assignment 2: Kendaraan
-
-**Files:** `Kendaraan.java`, `Mobil.java`, `Sepeda.java`, `KendaraanBeraksi.java`
-**Package:** `Pra2.I2TugasAbstraksi2`
-
-Unlike I1, each class is written in its own separate file. `Kendaraan` is an abstract class with one abstract method `bergerak()`. Both `Mobil` and `Sepeda` provide their own implementation. In `KendaraanBeraksi`, variables of the abstract type `Kendaraan` are used to store concrete objects (upcasting).
-
-**Concepts:** Abstract Class, Separate Files per Class, Upcasting to Abstract Type
-
-**Output:**
-```
-Mobil bergerak dengan roda
-Sepeda bergerak dengan pedal
-```
-
----
-
-## How to Run
-
-All files use Java `package` declarations, so they must be compiled from the **root folder** `PraUTS/`.
+Semua file menggunakan deklarasi `package`, sehingga harus dikompilasi dari **folder root** `PraUTS/`.
 
 **1. Compile:**
 ```bash
@@ -358,16 +213,9 @@ javac Pra1/F1P5/*.java
 javac Pra1/F2P6/*.java
 javac Pra1/F3P7/*.java
 javac Pra1/G1T1/*.java
-javac Pra2/G2T2/*.java
-javac Pra2/G3T3/*.java
-javac Pra2/G4P7/*.java
-javac Pra2/H1Overriding/*.java
-javac Pra2/H2Overloading/*.java
-javac Pra2/I1TugasAbstraksi/*.java
-javac Pra2/I2TugasAbstraksi2/*.java
 ```
 
-**2. Run (use the full package name):**
+**2. Run:**
 ```bash
 java Pra1.E1.MotorBeraksi
 java Pra1.E1P2.Motor2Beraksi
@@ -377,50 +225,17 @@ java Pra1.F1P5.Sks
 java Pra1.F2P6.Main
 java Pra1.F3P7.HewanPolimor
 java Pra1.G1T1.MahasiswaBeraksi
-java Pra2.G2T2.MatematikaBeraksi
-java Pra2.G3T3.MobilLengkapBeraksi
-java Pra2.G4P7.HewanPolimor
-java Pra2.H1Overriding.BentukBeraksi
-java Pra2.H2Overloading.HitungBeraksi
-java Pra2.I1TugasAbstraksi.MakhlukHidupBeraksi
-java Pra2.I2TugasAbstraksi2.KendaraanBeraksi
 ```
 
----
-
-## OOP Concepts Summary
-
-| Concept | Location |
-|---------|----------|
-| Class & Object | E1, E1P2, E2P3, E3P4 |
-| Constructor | E1, E3P4 |
-| Access Modifier (`private`) | E1, E1P2, F1P5 |
-| Setter & Getter | E1P2, F1P5 |
-| Encapsulation | F1P5 |
-| Inheritance (`extends`) | F2P6 |
-| Polymorphism | F3P7, G4P7 |
-| Method Overriding + `@Override` | F3P7, H1Overriding |
-| Method Overloading | H2Overloading |
-| Abstract Class & Method | I1TugasAbstraksi, I2TugasAbstraksi2 |
+> Atau buka project di **NetBeans** dan jalankan file `*Beraksi.java` / `Main.java` di masing-masing folder.
 
 ---
 
-## Tech Stack
+## Info Mata Kuliah
 
 | Info | Detail |
-|------|--------|
-| Language | Java |
-| IDE | Visual Studio Code |
-| Build | Manual (`javac` / `java`) |
-| Package System | Java Package (`Pra1.*`, `Pra2.*`) |
-
----
-
-## Course Info
-
-| Info | Detail |
-|------|--------|
-| Course | Object-Oriented Programming |
-| Faculty | FILKOM |
-| Semester | 2 |
-| Type | Pre-Midterm Practicum |
+|---|---|
+| Mata Kuliah | Pemrograman Berorientasi Objek |
+| Fakultas | FILKOM |
+| Bahasa | Java |
+| Tipe | Praktikum Pra UTS Sesi 1 |
