@@ -1,5 +1,4 @@
 # Praktikum Pra UTS — Object-Oriented Programming (Java)
-
 Repositori ini berisi kumpulan kode hasil praktikum Pra UTS mata kuliah **Pemrograman Berorientasi Objek (OOP)** menggunakan bahasa pemrograman Java.
 
 ---
